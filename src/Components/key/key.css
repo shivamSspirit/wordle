@@ -1,0 +1,32 @@
+
+.key {
+  width: 2.5rem;
+  height: 2.8rem;
+  border-radius: 4px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: grey;
+  font-weight: bold;
+  color: white;
+}
+
+#big {
+  width: 70px;
+  height: 44px;
+  border-radius: 15px;
+  border: 1px solid gray;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#disabled {
+  background-color: rgb(62, 67, 67);
+}

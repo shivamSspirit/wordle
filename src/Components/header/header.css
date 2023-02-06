@@ -1,0 +1,36 @@
+.header-container {
+    width: 100%;
+    background-color: black;
+    border-bottom: 1px solid #3a3a3c;
+    height: auto;
+}
+
+.header-box {
+    width: 100%;
+    display: flex;
+}
+
+.head-title {
+    flex-grow: 1;
+    font-family: "nyt-karnakcondensed";
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: .01em;
+    color: white;
+    pointer-events: none;
+    text-align: center;
+}
+
+.mode-icon {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+
+.mode {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}

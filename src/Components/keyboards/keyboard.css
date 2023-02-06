@@ -1,0 +1,36 @@
+.keyboard {
+    width: 40%;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1020px) {
+    .keyboard {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .keyboard {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .keyboard {
+        width: 100%;
+    }
+}
