@@ -4,6 +4,7 @@ import './gameover.css'
 
 function GameOver() {
   const { gameover, correctWord, currAttempt } = useWordle();
+  console.log("ccc",gameover)
   return (
     <div className='gameover'>
       <h3>{gameover.guessedWord ? "you Correctly guessed" : "you failed"}</h3>

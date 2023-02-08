@@ -14,6 +14,7 @@ const WordleContext = ({ children }) => {
     const [correctWord, setCorrectWord] = useState('')
     const [themes, setThemes] = useState("light")
 
+
     const toggleTheme = () => {
         setThemes((theme) => theme === "light" ? "dark" : "light")
     }
@@ -59,9 +60,12 @@ const WordleContext = ({ children }) => {
         else {
             alert("word not found")
         }
-        if (currword === correctWord) {
+        if (currword.toLowerCase() === correctWord) {
             setGameOver({ gameOver: true, guessedWord: true })
             return;
+        }
+        if (currAttempt.attempt === 5 && currword.toLowerCase() === correctWord) {
+            setGameOver({ gameOver: true, guessedWord: true })
         }
         if (currAttempt.attempt === 5) {
             setGameOver({ gameOver: true, guessedWord: false })
@@ -75,7 +79,7 @@ const WordleContext = ({ children }) => {
         onSelectletter, onSelectdelete,
         onSelectEnter, correctWord,
         disabledletters, setDisablesLetters,
-        gameover, setGameOver,themes,toggleTheme
+        gameover, setGameOver, themes, toggleTheme
     };
 
     return (
