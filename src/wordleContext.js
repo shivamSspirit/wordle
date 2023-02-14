@@ -14,6 +14,7 @@ const WordleContext = ({ children }) => {
     const [correctWord, setCorrectWord] = useState('')
     const [themes, setThemes] = useState("light")
 
+    console.log("corrext",correctWord)
 
     const toggleTheme = () => {
         setThemes((theme) => theme === "light" ? "dark" : "light")
@@ -22,6 +23,7 @@ const WordleContext = ({ children }) => {
     useEffect(() => {
         generateWordSet().then((words) => {
             setWordSet(words.wordSet)
+            console.log('ccccc',words.todaysWord)
             setCorrectWord(words.todaysWord)
         })
     }, [])

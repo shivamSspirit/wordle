@@ -7,9 +7,10 @@ function Word({ letterposition, attemptval }) {
 
   const letter = board[attemptval][letterposition]
   const correct = correctWord.toUpperCase()[letterposition] === letter;
-  const almost = !correct && letter !== "" && correctWord.includes(letter);
+  const almost = !correct && letter !== "" && correctWord.toUpperCase().includes(letter);
 
-  const letterState = currAttempt.attempt > attemptval && (correct ? "correct" : almost ? "almost" : "error")
+  const letterState = currAttempt.attempt > attemptval && (correct ? "correct" : almost ? "almost" : "error");
+  console.log("letter state",letterState)
 
   useEffect(() => {
     if (letter !== "" && !correct && !almost) {
